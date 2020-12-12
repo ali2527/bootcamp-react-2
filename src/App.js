@@ -1,17 +1,17 @@
 
 import './App.css';
-import Button from '@material-ui/core/Button';
 import { toggleDarkMode } from "halfmoon"
 
 function App() {
   return (
-    <div className="App">
-      <h1>hello world</h1>
-      <button className="btn m-10" onClick={toggleDarkMode}> &#127769;</button>
+    <div className="App m-10 p-10">
 
-      <Button variant="contained" color="primary" >
-      Hello World
-    </Button>
+      <h1>Dark Mode Switch</h1>
+
+      <div class="custom-switch">
+       <input type="checkbox" id="switch-1" value="" onClick={toggleDarkMode}/>
+       <label for="switch-1">Dark Mode </label>
+      </div>
       
     </div>
   );
