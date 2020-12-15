@@ -1,19 +1,18 @@
-import React from 'react'
-import { toggleDarkMode } from "halfmoon";
+import React from "react";
+import { toggleDarkmode } from "reacthalfmoon";
+import { Button } from "reacthalfmoon";
 
 function login() {
-    return (
-        <div>
-             <div className="card w-400 mw-full m-auto position-relative">
+  return (
+    <div>
+      <div className="card w-400 mw-full m-auto position-relative">
         <div className="position-absolute top-0 right-0 z-10 p-10">
-          <button className="btn" onClick={toggleDarkMode}>
-            {" "}
-            &#127769;
-          </button>
-        </div><br></br>
+          <Button onClick={toggleDarkmode}> &#127769;</Button>
+        </div>
+        <br></br>
         <h1 className="card-title mr-auto">login</h1>
 
-        <form >
+        <form>
           <div className="form-group">
             <label htmlFor="full-name" className="required">
               Username / Email
@@ -38,15 +37,11 @@ function login() {
               required="required"
             />
           </div>
-          <input
-            className="btn btn-primary btn-block"
-            type="submit"
-          />
-          
+          <input className="btn btn-primary btn-block" type="submit" />
         </form>
       </div>
-        </div>
-    )
+    </div>
+  );
 }
 
-export default login
+export default login;

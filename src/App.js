@@ -1,7 +1,5 @@
 import "./App.css";
 import Login from "./login";
-import Bar from "./bar";
-import Pie from "./pie";
 import Navbar from "./navbar";
 import Info from './infopanel'
 

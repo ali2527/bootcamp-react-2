@@ -1,10 +1,12 @@
 import React from "react";
 
+import icon from "./corona.png"
+
 function navbar() {
   return (
     <div>
       <nav className="navbar bg-primary bg-dark-dm">
-        <a href="#" className="navbar-brand text-light">Covid-19 Tracker</a>
+        <a href="#" className="navbar-brand text-light"><img src={icon} />Covid-19 Tracker</a>
 
         <form className="form-inline ml-auto" >
           <div className="input-group">
