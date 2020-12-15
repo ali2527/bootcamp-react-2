@@ -1,8 +1,13 @@
 import React from "react";
-
 import icon from "./corona.png"
+import { toggleDarkmode } from "reacthalfmoon";
+import { Button } from "reacthalfmoon";
 
-function navbar() {
+
+
+
+function Navbar() {
+
   return (
     <div>
       <nav className="navbar bg-primary bg-dark-dm">
@@ -22,11 +27,16 @@ function navbar() {
                 <span className="sr-only">Search docs</span>
               </button>
             </div>
+            
           </div>
+          <Button onClick={toggleDarkmode}> &#127769;</Button>
         </form>
       </nav>
+
+
+      
     </div>
   );
 }
 
-export default navbar;
+export default Navbar;
