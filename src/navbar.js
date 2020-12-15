@@ -14,7 +14,7 @@ function Navbar() {
         <a href="#" className="navbar-brand text-light"><img src={icon} />Covid-19 Tracker</a>
 
         <form className="form-inline ml-auto" >
-          
+
           <Button onClick={toggleDarkmode}> &#127769;</Button>
         </form>
       </nav>
@@ -26,3 +26,20 @@ function Navbar() {
 }
 
 export default Navbar;
+
+
+/*<div className="input-group">
+<input
+  type="text"
+  className="form-control"
+  placeholder="Search docs"
+  required="required"
+/>
+<div className="input-group-append">
+  <button className="btn" type="submit">
+  &#x1F50D;
+    <span className="sr-only">Search docs</span>
+  </button>
+</div>
+
+</div>*/
