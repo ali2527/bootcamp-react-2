@@ -2,7 +2,6 @@ import "./App.css";
 import React  from 'react'
 import  {useState} from 'react'
 import Navbar from "./navbar";
-
 import FootNav from "./footNav"
 import InfoPanel from './infopanel'
 
