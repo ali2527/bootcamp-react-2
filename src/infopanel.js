@@ -5,8 +5,9 @@ import Graphs from './graphs'
 
 function infopanel({currentScreen}) {
     
+    
     if(currentScreen === 0)
-        return <GlobalData />
+        return(<GlobalData />);
     else if(currentScreen === 1)
         return <CountryData />
     else return <Graphs />

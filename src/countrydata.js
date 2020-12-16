@@ -4,13 +4,18 @@ import "./Global.css";
 import { Select, Form } from "reacthalfmoon";
 import { Col } from "reacthalfmoon";
 import Chart from "react-google-charts";
+import fever from "./fever.svg"
+import mask from "./mask.svg"
+import skull from "./skull.svg"
+
 
 function CountryData() {
   const [countryData, setCountryData] = useState([{}]);
   const [selectedValue, setSelectedValue] = useState(0);
+  
+
 
   const handleSelect = (e) => {
-    console.log(e.target.value);
     setSelectedValue(e.target.value);
   };
 
@@ -23,15 +28,18 @@ function CountryData() {
       .catch((error) => console.log(error));
   }, []);
 
+
   return (
     <div>
-      <div className="container text-center">
-        <h1>Country Data</h1>
+      <div className="container text-center ">
+        <h1 className="m-5 font-weight-bold">Country Data</h1>
         <Chart
-          className="align-center bg-dark"
+          className="align-center "
+          
           width={"100%"}
           height={"500px"}
           chartType="GeoChart"
+          chartVersion="49"
           data={[
             ["Country", "Cases", "deaths"],
             [
@@ -42,10 +50,13 @@ function CountryData() {
           ]}
           options={
             {
-              backgroundColor: 'rgba(255,255,255,0.5)',
+              'backgroundColor': 'transparent',
+              legend: 'none',
+              colorAxis: { colors: ['#8a0e0e'] }
             }
           }
-          rootProps={{ "data-testid": "1" }}
+          mapsApiKey="AIzaSyD_TdNUGTFLfTCE8oXTBQCy0wpstGewQLk"
+          rootProps={{ 'data-testid': '1' }}
         />
 
         <Form className="form-inline m-10">
@@ -60,29 +71,37 @@ function CountryData() {
                     {country["country"]}
                   </option>
                 );
+                
               })}
             </Select>
           </Col>
         </Form>
 
-        <h1>{countryData["country"]}</h1>
-        <div className="row">
+         <div className="row">
           <div className="col-sm p-5">
             <div className="card h-100 border-0 bg-primary shadow-lg text-white  p-10 text-center">
-              <h3 className="m-5">Active Cases </h3>
-              {countryData[selectedValue].active}{" "}
+            <div className="row">
+            <div className="col-2 p-10"><img src={fever} alt="icon" width="60px"/></div>
+            <div className="col-10 text-right"><h4 className="m-0 ">{countryData[selectedValue].active} </h4><h5 className="m-5 ">Active Cases </h5> 
+              </div>
+                    </div>
             </div>
           </div>
           <div className="col-sm p-5">
             <div className="card h-100 border-0 bg-success shadow-lg text-white  p-10 text-center">
-              <h3 className="m-5">Recoverd </h3>
-              {countryData[selectedValue].recovered}{" "}
+            <div className="row">
+            <div className="col-2 p-10"><img src={mask} alt="icon" width="60px"/></div>
+            <div className="col-10 text-right"><h4 className="m-0 ">{countryData[selectedValue].recovered}</h4><h5 className="m-5 ">Recovered </h5> 
+              </div>
+                    </div>
             </div>
           </div>
           <div className="col-sm p-5">
             <div className="card h-100 border-0 bg-danger shadow-lg text-white p-10 text-center">
-              <h3 className="m-5">Deaths</h3>{" "}
-              {countryData[selectedValue].deaths}
+            <div className="row">
+            <div className="col-2 p-10"><img src={skull} alt="icon" width="70px"/></div>
+            <div className="col-10 text-right"><h4 className="m-0 ">{countryData[selectedValue].deaths} </h4><h5 className="m-5 ">Deaths </h5></div> 
+                    </div>
             </div>
           </div>
         </div>

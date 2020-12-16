@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App ">
       <Navbar />
-      <InfoPanel currentScreen={screenConfig[0]}/>
+      <InfoPanel currentScreen={screenConfig[0]} className="overflow-scroll"/>
       <FootNav screenConfig={screenConfig}/>
       <br />
       <br />

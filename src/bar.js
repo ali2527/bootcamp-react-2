@@ -1,9 +1,23 @@
 import React from 'react'
-import {Bar} from 'react-chartjs-2';
+import {Line} from 'react-chartjs-2';
+import { useEffect } from "react";
 
 
 
-const data = {
+
+
+function BarChart() {
+
+  useEffect(() => {
+    fetch("https://disease.sh/v3/covid-19/historical/all?lastdays=all")
+      .then((response) => response.json())
+      .then((countrydata) => {
+        console.log(countrydata);
+      })
+      .catch((error) => console.log(error));
+  }, []);
+
+  const data = {
     labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
     datasets: [
       {
@@ -26,23 +40,21 @@ const data = {
     ]
   };
 
-function bar() {
     return (
         <div>
           <h2>Bar Chart</h2>
-          <Bar
-            data={data}
-            width={100}
-            height={200}
-            options={{
-              maintainAspectRatio: false
-            }}
-          />
+          <Line data={data} 
+          width={100}
+          height={200}
+          options={{
+            maintainAspectRatio: false
+          }}/>
+          
         </div>
       );
 }
 
-export default bar
+export default BarChart
 
 
 
