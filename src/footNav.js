@@ -20,7 +20,7 @@ import TimelineIcon from '@material-ui/icons/Timeline';
         screenConfig[1](newValue);
       }}
       showLabels
-      className="bg-dark-dm position-absolute bottom-0 left-0 right-0"
+      className="bg-dark-dm position-absolute bottom-0 left-0 right-0 z-10"
     >
       <BottomNavigationAction label="Global Stats" icon={<LanguageIcon fontSize="large" />} className="text-light-dm " />
       <BottomNavigationAction label="Country Stats" icon={<PublicIcon fontSize="large" />} className="text-light-dm"/>

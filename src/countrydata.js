@@ -1,6 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import "./Global.css";
+import "./country.css";
 import { Select, Form } from "reacthalfmoon";
 import { Col } from "reacthalfmoon";
 import Chart from "react-google-charts";
@@ -29,9 +29,12 @@ function CountryData() {
   }, []);
 
 
+ 
+
+
   return (
     <div>
-      <div className="container text-center ">
+      <div className="container-fluid  text-center overflow-scroll countrymiddle " >
         <h1 className="m-5 font-weight-bold">Country Data</h1>
         <Chart
           className="align-center "
@@ -55,7 +58,7 @@ function CountryData() {
               colorAxis: { colors: ['#8a0e0e'] }
             }
           }
-          mapsApiKey="AIzaSyD_TdNUGTFLfTCE8oXTBQCy0wpstGewQLk"
+          mapsApiKey="AIzaSyDFlf6SC6TkCAi09f7BRhcIiA3Ah_pijaU"
           rootProps={{ 'data-testid': '1' }}
         />
 
@@ -105,7 +108,7 @@ function CountryData() {
             </div>
           </div>
         </div>
-      </div>
+      </div><br/>
     </div>
   );
 }

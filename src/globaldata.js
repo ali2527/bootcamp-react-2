@@ -1,6 +1,6 @@
 import React from "react";
-import { useEffect,useState } from 'react'
-import './Global.css'
+import "./global.css";
+import { useEffect,useState } from 'react';
 import Chart from "react-google-charts";
 import fever from "./fever.svg"
 import mask from "./mask.svg"
@@ -19,7 +19,7 @@ function GlobalData({currentScreen}) {
 
   return (
     <div>
-      <div className="container  text-center">
+      <div className="globalmiddle container-fluid  text-center overflow-scroll">
         <h1 >Global Data</h1>
         <div className="row">
           <div className="col-sm p-5">
@@ -103,7 +103,7 @@ function GlobalData({currentScreen}) {
             ['China','315'],
             ['Colombia','76860'],
             ['Comoros','20'],
-            ['Congo','1112'],
+            ['CG','1112'],
             ['Costa Rica','31109'],
             ['Croatia','22402'],
             ['Cuba','876'],
@@ -111,7 +111,7 @@ function GlobalData({currentScreen}) {
             ['Cyprus','13648'],
             ['Czechia','67480'],
             ["Côte d'Ivoire",'307'],
-            ["Democratic Republic of the Congo",'1707'],
+            ["CD",'1707'],
             ['Denmark','35003'],
             ['Diamond Princess','0'],
             ['Djibouti','70'],
@@ -214,6 +214,7 @@ function GlobalData({currentScreen}) {
             ['Palestine','23606'],
             ['Panama','28721'],
             ['Papua New Guinea','120'],
+            ['Puerto Rico','0'],
             ['Paraguay','25409'],
             ['Peru','28544'],
             ['Philippines','24873'],
@@ -245,7 +246,7 @@ function GlobalData({currentScreen}) {
             ['Solomon Islands','12'],
             ['Somalia','929'],
             ['South Africa','85041'],
-            ['South Sudan','117'],
+            ['SS','117'],
             ['Spain','1723087'],
             ['Sri Lanka','8923'],
             ['St. Barth','34'],
@@ -288,9 +289,9 @@ function GlobalData({currentScreen}) {
               colorAxis: {colors: ['#850d0d', '#5e0909','#400606','#2b0404',]},
             }
           }
-          mapsApiKey="AIzaSyD_TdNUGTFLfTCE8oXTBQCy0wpstGewQLk"
+          mapsApiKey="AIzaSyDFlf6SC6TkCAi09f7BRhcIiA3Ah_pijaU"
           rootProps={{ 'data-testid': '1' }}
-        />
+        /><br/>
 
 
       </div>
