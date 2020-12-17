@@ -1,5 +1,5 @@
 import React from "react";
-import "./global.css";
+import './new.css'
 import { useEffect,useState } from 'react';
 import Chart from "react-google-charts";
 import fever from "./fever.svg"
